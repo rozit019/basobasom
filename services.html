@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | BASOBAS</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "DM Sans", sans-serif;
+      }
+
+      :root {
+        --sky-50: #f0f9ff;
+        --sky-100: #e0f2fe;
+        --sky-200: #bae6fd;
+        --sky-300: #7dd3fc;
+        --sky-400: #38bdf8;
+        --sky-500: #0ea5e9;
+        --sky-600: #0284c7;
+        --sky-700: #0369a1;
+        --sky-800: #075985;
+        --sky-900: #0c4a6e;
+        --white: #ffffff;
+        --gray-500: #64748b;
+        --gray-700: #334155;
+      }
+
+      body {
+        background: var(--sky-50);
+        color: var(--gray-700);
+      }
+
+      /* NAVBAR */
+      .nav {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 0.5px solid var(--sky-200);
+        padding: 0 2rem;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .nav-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--sky-700);
+      }
+
+      .nav-logo span {
+        color: var(--sky-400);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links li a {
+        font-size: 14px;
+        color: var(--gray-500);
+        text-decoration: none;
+        transition: 0.2s;
+      }
+
+      .nav-links li a:hover {
+        color: var(--sky-600);
+      }
+
+      .nav-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .btn-ghost,
+      .btn-primary {
+        padding: 7px 16px;
+        border-radius: 20px;
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn-ghost {
+        border: 1px solid var(--sky-300);
+        background: transparent;
+      }
+
+      .btn-primary {
+        background: var(--sky-500);
+      }
+
+      .btn-ghost a,
+      .btn-primary a {
+        text-decoration: none;
+        font-size: 13px;
+      }
+
+      .btn-ghost a {
+        color: var(--sky-700);
+      }
+
+      .btn-primary a {
+        color: white;
+      }
+
+      /* HERO */
+      .hero {
+        background: linear-gradient(135deg, var(--sky-600), var(--sky-400));
+        text-align: center;
+        padding: 80px 20px;
+        color: white;
+      }
+
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 44px;
+        margin-bottom: 12px;
+      }
+
+      .hero p {
+        font-size: 16px;
+        opacity: 0.9;
+      }
+
+      /* SERVICES SECTION */
+      .services-section {
+        max-width: 1100px;
+        margin: auto;
+        padding: 60px 2rem;
+      }
+
+      .services-title {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        color: var(--sky-800);
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+
+      .service-card {
+        background: white;
+        padding: 24px;
+        border-radius: 14px;
+        border: 1px solid var(--sky-200);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        transition: 0.3s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .service-icon {
+        font-size: 32px;
+        margin-bottom: 14px;
+      }
+
+      .service-card h3 {
+        color: var(--sky-700);
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .service-card p {
+        font-size: 14px;
+        color: var(--gray-500);
+        line-height: 1.7;
+      }
+
+      /* FOOTER */
+      .footer {
+        background: var(--sky-900);
+        padding: 24px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-logo">BASO<span>BAS</span></div>
+
+      <ul class="nav-links">
+        <li><a href="basobas_room_rental.html">Explore</a></li>
+        <li><a href="">List room</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-ghost">
+          <a href="login.html">Login</a>
+        </button>
+        <button class="btn-primary">
+          <a href="signup.html">Sign Up</a>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Our Services</h1>
+      <p>Everything you need for room rental and booking</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section">
+      <h2 class="services-title">What We Offer</h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Verified Room Listings</h3>
+          <p>
+            Browse thousands of trusted and verified room listings in different
+            locations.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💬</div>
+          <h3>Direct Chat</h3>
+          <p>
+            Communicate directly with room owners using our real-time chat
+            system.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📅</div>
+          <h3>Instant Booking</h3>
+          <p>
+            Book your room quickly with our secure and easy booking platform.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🔔</div>
+          <h3>Real-time Notifications</h3>
+          <p>
+            Get instant updates about messages, bookings, and listing changes.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>Secure Authentication</h3>
+          <p>Safe login and signup with secure user authentication.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📍</div>
+          <h3>Location Search</h3>
+          <p>Easily search rooms by area, city, or nearby locations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER
+    <footer class="footer">© 2026 BASOBAS. All rights reserved.</footer> -->
+  </body>
+</html>

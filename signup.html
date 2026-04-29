@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASOBAS Signup</title>
+</head>
+
+<body>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --sky-50: #f0f9ff;
+            --sky-100: #e0f2fe;
+            --sky-200: #bae6fd;
+            --sky-300: #7dd3fc;
+            --sky-400: #38bdf8;
+            --sky-500: #0ea5e9;
+            --sky-600: #0284c7;
+            --sky-700: #0369a1;
+            --sky-800: #075985;
+            --sky-900: #0c4a6e;
+            --white: #ffffff;
+            --gray-500: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: linear-gradient(135deg, var(--sky-600), var(--sky-300));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* CARD */
+    
+
+        .signup-card {
+            width: 360px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            padding: 32px 28px;
+            box-shadow: 0 10px 40px rgba(3, 105, 161, 0.2);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* LOGO */
+        .logo {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: var(--sky-700);
+        }
+
+        .logo span {
+            color: var(--sky-400);
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+
+        /* TOGGLE */
+        .toggle {
+            display: flex;
+            background: var(--sky-100);
+            border-radius: 30px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .toggle-btn {
+            flex: 1;
+            padding: 8px;
+            text-align: center;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--sky-700);
+        }
+
+        .toggle-btn.active {
+            background: var(--sky-500);
+            color: white;
+            font-weight: 500;
+        }
+
+        /* INPUT */
+        .input-group {
+            margin-bottom: 14px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--sky-200);
+            outline: none;
+            font-size: 14px;
+        }
+
+        .input-group input:focus {
+            border-color: var(--sky-500);
+        }
+
+        /* ADMIN EXTRA */
+        .admin-field {
+            display: none;
+        }
+
+        /* BUTTON */
+        .signup-btn {
+            width: 100%;
+            padding: 11px;
+            background: var(--sky-500);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* FOOTER */
+        .footer-text {
+            text-align: center;
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-top: 14px;
+        }
+
+        .footer-text a {
+            color: var(--sky-600);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* BG CIRCLES */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .c1 {
+            width: 200px;
+            height: 200px;
+            top: 30px;
+            left: 40px;
+        }
+
+        .c2 {
+            width: 150px;
+            height: 150px;
+            bottom: 40px;
+            right: 60px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+
+        <div class="signup-card">
+
+            <div class="logo">BASO<span>BAS</span></div>
+            <div class="subtitle">Create your account</div>
+
+            <!-- TOGGLE -->
+            <div class="toggle">
+                <div class="toggle-btn active" id="userBtn">User</div>
+                <div class="toggle-btn" id="adminBtn">Admin</div>
+            </div>
+
+            <form>
+
+                <div class="input-group">
+                    <input type="text" placeholder="Full Name">
+                </div>
+
+                <div class="input-group">
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <div class="input-group">
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <!-- ADMIN ONLY -->
+                <div class="input-group admin-field">
+                    <input type="text" placeholder="Admin Secret Key">
+                </div>
+
+                <button class="signup-btn">Sign Up</button>
+
+            </form>
+
+            <div class="footer-text">
+                Already have an account? <a href="login.html">Login</a>
+            </div>
+
+        </div>
+
+        <script>
+            const userBtn = document.getElementById('userBtn');
+            const adminBtn = document.getElementById('adminBtn');
+            const adminField = document.querySelector('.admin-field');
+
+            userBtn.onclick = () => {
+                userBtn.classList.add('active');
+                adminBtn.classList.remove('active');
+                adminField.style.display = 'none';
+            };
+
+            adminBtn.onclick = () => {
+                adminBtn.classList.add('active');
+                userBtn.classList.remove('active');
+                adminField.style.display = 'block';
+            };
+        </script>
+    </body>
+
+</html>

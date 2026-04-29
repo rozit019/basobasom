@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - BASOBAS</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap");
+
+      :root {
+        --sky-50: #f0f9ff;
+        --sky-100: #e0f2fe;
+        --sky-200: #bae6fd;
+        --sky-300: #7dd3fc;
+        --sky-400: #38bdf8;
+        --sky-500: #0ea5e9;
+        --sky-600: #0284c7;
+        --sky-700: #0369a1;
+        --sky-800: #075985;
+        --sky-900: #0c4a6e;
+        --gray-500: #64748b;
+        --gray-700: #334155;
+        --white: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: linear-gradient(135deg, var(--sky-600), var(--sky-300));
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* LOGIN CARD */
+      .login-card {
+        width: 360px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        border-radius: 18px;
+        padding: 32px 28px;
+        box-shadow: 0 10px 40px rgba(3, 105, 161, 0.2);
+        animation: fadeIn 0.6s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* LOGO */
+      .logo {
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-size: 26px;
+        color: var(--sky-700);
+        margin-bottom: 8px;
+      }
+      .logo span {
+        color: var(--sky-400);
+      }
+
+      .subtitle {
+        text-align: center;
+        font-size: 13px;
+        color: var(--gray-500);
+        margin-bottom: 24px;
+      }
+
+      /* INPUT */
+      .input-group {
+        margin-bottom: 16px;
+      }
+
+      .input-group label {
+        font-size: 12px;
+        color: var(--gray-500);
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--sky-200);
+        outline: none;
+        font-size: 14px;
+        transition: 0.2s;
+      }
+
+      .input-group input:focus {
+        border-color: var(--sky-500);
+        box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.15);
+      }
+
+      /* OPTIONS */
+      .options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        margin-bottom: 18px;
+      }
+
+      .options label {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--gray-500);
+      }
+
+      .options a {
+        color: var(--sky-600);
+        text-decoration: none;
+      }
+
+      /* BUTTON */
+      .login-btn {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 25px;
+        background: var(--sky-500);
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .login-btn:hover {
+        background: var(--sky-600);
+      }
+
+      /* FOOTER */
+      .footer {
+        text-align: center;
+        font-size: 13px;
+        margin-top: 18px;
+        color: var(--gray-500);
+      }
+
+      .footer a {
+        color: var(--sky-600);
+        text-decoration: none;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login-card">
+      <div class="logo">
+        <a href="basobas_room_rental.html">BASO<span>BAS</span></a>
+      </div>
+      <div class="subtitle">Welcome back! Login to continue</div>
+
+      <form>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" />
+        </div>
+
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" />
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot?</a>
+        </div>
+
+        <button class="login-btn">Login</button>
+      </form>
+
+      <div class="footer">
+        Don't have an account? <a href="signup.html">Sign up</a>
+      </div>
+    </div>
+  </body>
+</html>
