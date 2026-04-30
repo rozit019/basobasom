@@ -699,6 +699,155 @@
         border-radius: 20px;
         color: rgba(255, 255, 255, 0.4);
       }
+      /* =========================
+   MOBILE RESPONSIVE FIX
+   ========================= */
+
+      /* Tablets */
+      @media (max-width: 992px) {
+        .hero h1 {
+          font-size: 34px;
+        }
+
+        .section {
+          padding: 40px 1.5rem;
+        }
+
+        .nav-links {
+          gap: 1rem;
+        }
+
+        .rooms-grid {
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        /* NAV */
+        .nav {
+          flex-wrap: wrap;
+          height: auto;
+          padding: 10px 1rem;
+        }
+
+        .nav-links {
+          width: 100%;
+          justify-content: center;
+          margin-top: 10px;
+        }
+
+        .nav-actions {
+          width: 100%;
+          justify-content: center;
+          margin-top: 10px;
+        }
+
+        /* HERO */
+        .hero {
+          padding: 50px 1rem;
+        }
+
+        .hero h1 {
+          font-size: 28px;
+        }
+
+        .hero p {
+          font-size: 14px;
+        }
+
+        /* SEARCH BAR STACK */
+        .search-bar {
+          flex-direction: column;
+          border-radius: 14px;
+          padding: 10px;
+        }
+
+        .search-bar input,
+        .search-bar select,
+        .search-btn {
+          width: 100%;
+        }
+
+        .search-bar select {
+          border-left: none;
+          border-top: 1px solid var(--sky-200);
+          padding-top: 8px;
+        }
+
+        /* STATS */
+        .stats-strip {
+          flex-wrap: wrap;
+        }
+
+        .stat-item {
+          flex: 50%;
+          border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* GRID */
+        .rooms-grid {
+          grid-template-columns: 1fr;
+        }
+
+        /* FEATURES */
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+
+        /* HOW IT WORKS */
+        .how-steps {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .how-step::after {
+          display: none;
+        }
+
+        /* CHAT CTA */
+        .chat-cta {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .chat-btn {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+
+        /* FOOTER */
+        .footer-top {
+          flex-direction: column;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+        }
+      }
+
+      /* Extra Small Devices */
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 24px;
+        }
+
+        .section-title,
+        .features-title,
+        .how-title {
+          font-size: 22px;
+        }
+
+        .room-title {
+          font-size: 13px;
+        }
+
+        .room-price {
+          font-size: 14px;
+        }
+      }
     </style>
 
     <div class="site-wrap">
